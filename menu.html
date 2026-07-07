@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cafe Amore Full Menu — Explore our handcrafted dishes. Starters, Biryani, Pizza, Burgers, Continental and more. Ranchi, Jharkhand." />
+  <meta name="keywords" content="Cafe Amore menu, Ranchi restaurant menu, cafe menu Jharkhand" />
+  <title>Our Menu — Cafe Amore</title>
+  <link rel="icon" type="image/png" href="Cafe LOGO.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════ NAV ══════════════════════════════════ -->
+  <nav class="nav scrolled" id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Back to Cafe Amore home">
+        <img src="Cafe LOGO.png" alt="Cafe Amore Logo" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Cafe Amore</span>
+          <span class="nav-logo-tagline">Royal Heights, Ranchi</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+        <li><a href="index.html#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="index.html#gallery" class="nav-link" id="nav-gallery">Gallery</a></li>
+        <li><a href="index.html#visit" class="nav-link" id="nav-visit">Visit Us</a></li>
+        <li>
+          <a href="index.html#visit" class="btn btn-rose nav-cta" id="nav-reserve" style="padding: 0.65rem 1.4rem;">
+            Reserve Table
+          </a>
+        </li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="index.html" class="nav-mobile-link" id="mob-home">Home</a>
+    <a href="index.html#about" class="nav-mobile-link" id="mob-about">About</a>
+    <a href="index.html#gallery" class="nav-mobile-link" id="mob-gallery">Gallery</a>
+    <a href="index.html#visit" class="nav-mobile-link" id="mob-visit">Visit Us</a>
+    <a href="index.html#visit" class="btn btn-rose" id="mob-reserve" style="margin-top: 1rem;">Reserve Table</a>
+  </div>
+
+  <!-- ═══════════════════════════ MENU HERO ════════════════════════════════ -->
+  <section class="menu-hero" aria-labelledby="menu-hero-heading">
+    <div class="menu-hero-bg"></div>
+    <div class="menu-hero-overlay"></div>
+    <div class="menu-hero-content">
+      <p class="menu-hero-label">Cafe Amore · Ranchi</p>
+      <h1 class="menu-hero-title" id="menu-hero-heading">
+        Our <em>Menu</em>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Mobile category scroll bar -->
+  <div class="menu-mobile-cats" id="mobileCats" role="navigation" aria-label="Menu categories"></div>
+
+  <!-- ══════════════════════════ MENU BODY ═════════════════════════════════ -->
+  <div class="menu-body">
+    <div class="menu-layout">
+
+      <!-- ── Sidebar ─────────────────────────────────────────── -->
+      <aside class="menu-sidebar" id="menuSidebar" aria-label="Menu category navigation">
+        <p class="menu-sidebar-title">Categories</p>
+
+        <div class="menu-filter-bar" role="group" aria-label="Filter by diet">
+          <button class="menu-filter-btn active" id="filter-all" data-filter="all">All</button>
+          <button class="menu-filter-btn" id="filter-veg" data-filter="veg">● Veg</button>
+          <button class="menu-filter-btn" id="filter-nonveg" data-filter="nonveg">▲ Non-Veg</button>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav" aria-label="Jump to menu category">
+          <!-- Populated by JS -->
+        </nav>
+
+        <div class="sidebar-ask">
+          <p>Looking for something specific?</p>
+          <a href="tel:+919999999999" class="btn btn-outline-dark" id="ask-staff-btn" style="width: 100%; justify-content: center; font-size: 0.72rem; padding: 0.7rem 1rem;">
+            Ask Our Staff
+          </a>
+        </div>
+      </aside>
+
+      <!-- ── Menu Content ─────────────────────────────────────── -->
+      <main class="menu-content" id="menuContent" aria-label="Menu items">
+
+        <!-- Search -->
+        <div class="menu-search-bar">
+          <div class="menu-search-wrap">
+            <span class="menu-search-icon" aria-hidden="true">⌕</span>
+            <input
+              type="search"
+              class="menu-search"
+              id="menuSearch"
+              placeholder="Search your favourite dish..."
+              aria-label="Search menu items"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div id="menuCategories">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="menu-no-results" id="noResults" aria-live="polite">
+          <p>No dishes found. Try a different search.</p>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ FOOTER ════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="Cafe LOGO.png" alt="Cafe Amore Logo" />
+            <span class="footer-logo-name">Cafe Amore</span>
+          </div>
+          <p class="footer-tagline">Good Vibes. Great Coffee.<br/>Delicious Bites.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-col-links" role="list">
+            <li><a href="index.html" class="footer-col-link">Home</a></li>
+            <li><a href="menu.html" class="footer-col-link">Menu</a></li>
+            <li><a href="index.html#about" class="footer-col-link">About</a></li>
+            <li><a href="index.html#gallery" class="footer-col-link">Gallery</a></li>
+            <li><a href="index.html#visit" class="footer-col-link">Visit Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Hours &amp; Contact</p>
+          <ul class="footer-col-links" role="list">
+            <li><span class="footer-col-link">11:00 AM – 10:30 PM</span></li>
+            <li><a href="tel:+919999999999" class="footer-col-link">+91 99999 99999</a></li>
+            <li><a href="https://instagram.com/cafeamore.ranchi" class="footer-col-link" target="_blank" rel="noopener noreferrer">@cafeamore.ranchi</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Cafe Amore · Royal Heights, Ranchi · All rights reserved.</p>
+        <div class="footer-rating">
+          <span class="footer-rating-stars" aria-label="4.6 stars">★★★★★</span>
+          <span>4.6 on Google</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
